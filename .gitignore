@@ -1,0 +1,80 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+backend/.venv/
+.venv/
+env/
+venv/
+*.egg-info/
+dist/
+build/
+*.db
+*.sqlite3
+
+# Node / Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+.npm
+
+# Secrets and Environment
+.env
+backend/.env
+frontend/.env
+
+# Uploads and temporary data
+uploads/
+backend/uploads/
+backend/storage/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.venv/
+venv/
+.env
+
+# Environment variables
+.env.*
+!.env.example
+
+# Frontend
+node_modules/
+dist/
+.vite/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Uploaded medical documents and local storage
+uploads/
+storage/
+media/
+
+# Logs
+*.log
+
+# IDE and operating system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Test and coverage
+.pytest_cache/
+.coverage
+htmlcov/

@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', 'Noto Sans Malayalam', system-ui, -apple-system, sans-serif;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background-color: #090909;
+  color: #FFFFFF;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom dark scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090909;
+}
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f3f;
+}
+
+/* Malayalam readable font class */
+.font-malayalam {
+  font-family: 'Noto Sans Malayalam', 'Inter', system-ui, sans-serif;
+  line-height: 1.8;
+}
+
+/* Atmospheric red glow overlay */
+.bg-glow-radial {
+  background: radial-gradient(ellipse at 50% -10%, rgba(239, 41, 41, 0.18), transparent 70%);
+}
+
+.bg-glow-card {
+  background: linear-gradient(180deg, rgba(32, 32, 32, 0.95) 0%, rgba(21, 21, 21, 0.98) 100%);
+}
