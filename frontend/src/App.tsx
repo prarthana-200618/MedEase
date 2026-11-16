@@ -147,10 +147,14 @@ const MainContent: React.FC = () => {
   );
 };
 
+// basename must match vite's `base` config so React Router
+// resolves routes correctly when served from /MedEase/ on GitHub Pages.
+const BASENAME = import.meta.env.BASE_URL.replace(/\/$/, '') || '';
+
 export const App: React.FC = () => {
   return (
     <AuthProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={BASENAME}>
         <MainContent />
       </BrowserRouter>
     </AuthProvider>

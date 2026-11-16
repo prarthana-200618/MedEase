@@ -23,8 +23,12 @@ api.interceptors.response.use(
     if (error.response && error.response.status === 401) {
       localStorage.removeItem('medease_token');
       localStorage.removeItem('medease_user');
-      if (window.location.pathname !== '/login' && window.location.pathname !== '/') {
-        window.location.href = '/login';
+      // Use BASE_URL so the redirect works under any sub-path (e.g. /MedEase/)
+      const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+      const loginPath = `${base}/login`;
+      const rootPath = `${base}/`;
+      if (window.location.pathname !== loginPath && window.location.pathname !== rootPath) {
+        window.location.href = loginPath;
       }
     }
     return Promise.reject(error);
