@@ -38,11 +38,11 @@ jobs:
         working-directory: frontend
         run: npm run build
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: frontend/dist
-
+      - name: Build React application
+        working-directory: frontend
+        env:
+          VITE_API_BASE_URL: https://medease-api-y8n7.onrender.com/api
+        run: npm run build
   deploy:
     environment:
       name: github-pages
